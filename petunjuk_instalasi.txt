@@ -1,0 +1,17 @@
+
+Petunjuk instalasi :
+1. Pastikan versi PHP lebih dari 7
+2. Clone project di https://github.com/ronaldostg/walletku.git
+3. Setelah clone project, buka cmd dan jalankan perintah composer update
+4. Setelah update composer selesai, jalankan perintah php spark serve di cmd untuk menjalankan project.
+5. Kemudian copy url yang ditampilkan yaitu localhost:8080
+
+import database
+1. Buka command promp di directory prokect.
+untuk create database , ketik perintah "php spark db:create walletku_database"
+
+2. Kemudian untuk migration table di database, ketik perintah 'php spark migrate'
+3. Setelah migrasi database selesai, ketik perintah "php spark db:seed AllTableSeeder" 
+untuk mengisi dummy value untuk beberapa table.
+
+

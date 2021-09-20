@@ -12,7 +12,9 @@ class CustomerSeeder extends Seeder
         $data = [
             [
                 'username'  => 'ronaldostg',
-                'password'  =>  "ronaldo123",
+                
+                'password'  =>  password_hash('ronaldo123', PASSWORD_DEFAULT),
+
                 'fullname'  =>  "Ronaldo Sitanggang",
                 'phone_number'  =>  '081232233222',
                 'birthday'  =>  '1999-10-12',
@@ -22,7 +24,7 @@ class CustomerSeeder extends Seeder
             ],
             [
                 'username'  => 'nurdinsjafii',
-                'password'  =>  "nurdinsjafii123",
+                'password'  =>  password_hash('nurdinsjafii123', PASSWORD_DEFAULT),
                 'fullname'  =>  "Nurdin Sjafii",
                 'phone_number'  =>  '081232233222',
                 'birthday'  =>  '2003-05-15',
@@ -34,4 +36,4 @@ class CustomerSeeder extends Seeder
         ];
         $this->db->table('wk_customer')->insertBatch($data);
     }
-} 
+}
